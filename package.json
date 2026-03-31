@@ -18,10 +18,10 @@
   ],
   "scripts": {
     "dev": "node ./example/index",
-    "build": "pnpm run build:types && pnpm run build:js",
+    "build": "npm run build:types && pnpm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "esbuild './src/**/*.ts' --outbase=src --outdir=dist --format=esm --platform=node --target=es2022 --sourcemap --minify --packages=external",
-    "prepare": "pnpm run build"
+    "prepare": "npm run build"
   },
   "keywords": [
     "bot",
@@ -39,7 +39,6 @@
     "url": "https://github.com/imjxsx/wapi/issues"
   },
   "homepage": "https://github.com/imjxsx/wapi#readme",
-  "packageManager": "pnpm@10.20.0",
   "dependencies": {
     "@hapi/boom": "10.0.1",
     "@imjxsx/logger": "1.1.1",
